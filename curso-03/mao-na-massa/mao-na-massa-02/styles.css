@@ -1,7 +1,9 @@
 :root {
-  --light-blue: #22d4fd;
-  --black: #020202;
-  --white: #f2f2f2;
+  --primary-color: #7DE2D1;
+  --secondary-color: #339989;
+  --tertiary-color: #2B2C28;
+  --black: #131515;
+  --white: #FFFAFB;
 }
 
 * {
@@ -47,6 +49,10 @@ header {
   justify-content: space-between;
 }
 
+header h1 {
+  color: var(--primary-color);
+}
+
 nav {
   gap: 1rem;
 }
@@ -58,7 +64,7 @@ a {
 }
 
 a:hover {
-  color: var(--light-blue);
+  color: var(--primary-color);
   filter: brightness(0.9);
 }
 
@@ -89,7 +95,7 @@ h1 {
 }
 
 h1 span {
-  color: var(--light-blue);
+  color: var(--primary-color);
 }
 
 .container p {
@@ -98,7 +104,7 @@ h1 span {
 }
 
 .container p span {
-  color: var(--light-blue);
+  color: var(--primary-color);
 }
 
 .buttons {
@@ -122,7 +128,7 @@ h1 span {
   border-radius: 0.5rem;
 
   color: var(--black);
-  background-color: var(--light-blue);
+  background-color: var(--primary-color);
 }
 
 .button:hover {
