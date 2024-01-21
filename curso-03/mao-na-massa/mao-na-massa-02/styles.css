@@ -1,0 +1,137 @@
+:root {
+  --light-blue: #22d4fd;
+  --black: #020202;
+  --white: #f2f2f2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 93.5%;
+}
+
+body {
+  max-width: 70rem;
+  min-height: 100vh;
+
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--black);
+  color: var(--white);
+}
+
+header,
+nav,
+main,
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header {
+  width: 100%;
+  height: 100px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+nav {
+  gap: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--white);
+  transition: ease-in-out 0.2s;
+}
+
+a:hover {
+  color: var(--light-blue);
+  filter: brightness(0.9);
+}
+
+main {
+  width: 100%;
+  gap: 5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.title-container {
+  font-family: "Krona One", sans-serif;
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 3.5rem;
+}
+
+h1 span {
+  color: var(--light-blue);
+}
+
+.container p {
+  font-size: 1.125rem;
+  line-height: 2.25rem;
+}
+
+.buttons {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.button {
+  width: 100%;
+  height: 4rem;
+  padding: 1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 0.5rem;
+
+  color: var(--black);
+  background-color: var(--light-blue);
+}
+
+.button:hover {
+  color: var(--black);
+  filter: brightness(0.9);
+}
+
+img {
+  width: 100%;
+  max-width: 500px;
+}
+
+footer {
+  width: 100%;
+  height: 100px;
+}
