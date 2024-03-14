@@ -1,9 +1,9 @@
 :root {
-  --primary-color: #7DE2D1;
+  --primary-color: #7de2d1;
   --secondary-color: #339989;
-  --tertiary-color: #2B2C28;
+  --tertiary-color: #2b2c28;
   --black: #131515;
-  --white: #FFFAFB;
+  --white: #fffafb;
 }
 
 * {
@@ -11,10 +11,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-html, body {
-  overflow: hidden;
- }
 
 html {
   font-size: 93.5%;
@@ -30,10 +26,17 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  gap: 4rem;
 
   font-family: "Montserrat", sans-serif;
   background-color: var(--black);
   color: var(--white);
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 header,
@@ -47,23 +50,24 @@ footer {
 
 header {
   width: 100%;
-  height: 100px;
+  padding: 2rem 0;
 
   display: flex;
   justify-content: space-between;
 }
 
-header h1 {
+header :first-child {
   color: var(--primary-color);
 }
 
 nav {
   gap: 1rem;
+  font-size: 1.25rem;
 }
 
 a {
   text-decoration: none;
-  color: var(--white);
+  color: var(--secondary-color);
   transition: ease-in-out 0.2s;
 }
 
@@ -72,24 +76,38 @@ a:hover {
   filter: brightness(0.9);
 }
 
-main {
-  width: 100%;
-  gap: 5rem;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+a.active,
+a.active:hover {
+  cursor: default;
+  color: var(--primary-color);
+  filter: none;
 }
 
 .container {
   width: 100%;
+
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   justify-content: space-between;
-  gap: 2rem;
+
+  gap: 2.5rem;
 }
 
-.title-container {
+.content {
+  display: flex;
+  justify-content: space-between;
+  gap: 5rem;
+}
+.content-text {
+  max-width: 593px;
+  
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.title {
   font-family: "Krona One", sans-serif;
 }
 
@@ -102,21 +120,26 @@ h1 span {
   color: var(--primary-color);
 }
 
-.container p {
+.content p {
   font-size: 1.125rem;
   line-height: 2.25rem;
 }
 
-.container p span {
+.content p span {
   color: var(--primary-color);
+}
+
+.content-image {
+  width: 100%;
 }
 
 .buttons {
   width: 100%;
 
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .button {
@@ -128,27 +151,31 @@ h1 span {
   align-items: center;
   justify-content: center;
 
-  border: none;
+  border: 2px solid var(--primary-color);
   border-radius: 0.5rem;
-
-  color: var(--black);
-  background-color: var(--primary-color);
+  color: var(--white);
 }
 
 .button:hover {
   font-weight: 600;
+  background-color: var(--primary-color);
   color: var(--black);
   filter: brightness(0.9);
 }
 
 img {
   width: 100%;
-  max-width: 500px;
+  max-width: 30rem;
 
   border-radius: 1rem;
 }
 
+.about {
+  font: 300 1.5rem "Montserrat";
+  line-height: 2.25rem;
+}
+
 footer {
   width: 100%;
-  height: 100px;
+  padding: 2rem;
 }
